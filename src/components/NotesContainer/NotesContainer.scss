@@ -1,0 +1,12 @@
+.notes-container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+
+  &__message {
+    text-align: center;
+    color: #fff;
+    margin: 1.5rem 0;
+    font-size: 1.25rem;
+  }
+}

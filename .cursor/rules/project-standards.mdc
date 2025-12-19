@@ -1,0 +1,79 @@
+
+# Project Coding Standards (React + TypeScript + SCSS + Hooks)
+
+These rules MUST be followed for all AI-generated code in this project.
+The goal is to maintain consistent, clean, scalable patterns across the codebase.
+
+---
+
+# 1. Project Architecture
+
+## 1.1 Folder structure (mandatory)
+
+src/
+  components/
+    ComponentName/
+      ComponentName.tsx
+      ComponentName.module.scss
+      index.ts
+  hooks/
+    useSomething.ts
+  utils/
+    api/
+      http.ts
+      endpoints.ts
+    formatters/
+    validators/
+  types/
+  context/
+  assets/
+  styles/
+
+Rules:
+- Every component lives in its own folder.
+- Components always come with a paired `*.module.scss`.
+- Hooks go in `/hooks`.
+- Shared logic → `/utils`.
+- Reusable types → `/types`.
+
+---
+
+# 2. React Component Rules
+
+## 2.1 Always use functional components
+No class components, ever.
+
+## 2.2 Component structure order
+
+Components MUST follow this order:
+
+1. Imports  
+2. Types/interfaces  
+3. Component function  
+4. Hooks (state, effect, memo, callback)  
+5. Internal helpers  
+6. Return JSX  
+7. Export  
+
+Example:
+
+```tsx
+import styles from './Card.module.scss';
+import { useMemo } from 'react';
+
+export interface CardProps {
+  title: string;
+  children?: React.ReactNode;
+}
+
+export const Card = ({ title, children }: CardProps) => {
+  const hasContent = useMemo(() => !!children, [children]);
+
+  return (
+    <div className={styles.card}>
+      <h3 className={styles.title}>{title}</h3>
+      {hasContent && <div className={styles.body}>{children}</div>}
+    </div>
+  );
+};
+
