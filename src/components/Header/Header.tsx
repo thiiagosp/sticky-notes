@@ -20,20 +20,13 @@ function Header() {
 
   return (
     <header className="header">
+      <h1 className="header__logo">Sticky Notes</h1>
       <button
         className="header__button"
         onClick={handleAddNote}
         disabled={!isDesktop}
       >
         Add
-      </button>
-      <h1 className="header__logo">Sticky Notes</h1>
-      <button
-        className="header__button header__button--delete"
-        disabled={!isDesktop}
-      >
-        Delete
-        <span className="header__tooltip">Drag a note here to delete</span>
       </button>
     </header>
   );

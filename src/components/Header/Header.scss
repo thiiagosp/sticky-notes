@@ -35,6 +35,9 @@
     }
 
     &--delete {
+      position: fixed;
+      right: 3rem;
+      bottom: 3rem;
       background-color: #ff4757;
       color: white;
 
@@ -46,37 +49,6 @@
     &:disabled {
       cursor: not-allowed;
       opacity: 0.6;
-    }
-  }
-
-  &__tooltip {
-    visibility: hidden;
-    width: max-content;
-    max-width: 200px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 4px;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.8rem;
-    position: absolute;
-    top: 110%;
-    left: clamp(5px, 50%, calc(100% - 5px));
-    transform: translateX(-50%);
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.2s;
-    z-index: 10;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: transparent transparent #333 transparent;
     }
   }
 }

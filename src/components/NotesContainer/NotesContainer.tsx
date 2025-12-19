@@ -25,6 +25,15 @@ function NotesContainer() {
       {notes.map((note) => (
         <Card key={note.id} note={note} containerRef={containerRef} />
       ))}
+      <button
+        className="notes-container__button notes-container__button--delete"
+        disabled={!isDesktop}
+      >
+        X
+        <span className="notes-container__tooltip">
+          Drag a note here to delete
+        </span>
+      </button>
     </div>
   );
 }

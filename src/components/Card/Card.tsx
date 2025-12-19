@@ -23,7 +23,7 @@ function Card({ note, containerRef }: CardProps) {
 
   const checkOverDelete = () => {
     const deleteButton = document.querySelector(
-      ".header__button--delete"
+      ".notes-container__button--delete"
     ) as HTMLElement;
     if (!deleteButton || !cardRef.current) return false;
 
