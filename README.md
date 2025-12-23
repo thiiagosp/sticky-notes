@@ -29,4 +29,4 @@ npm install
 
 ## Live Demo
 
-You can check out the Sticky Notes app live on Vercel: [https://sticky-notes-27uq-nzq31mmpm-thiago-pereiras-projects-156a8f4e.vercel.app/](https://sticky-notes-27uq-nzq31mmpm-thiago-pereiras-projects-156a8f4e.vercel.app/)
+You can check out the Sticky Notes app live on Vercel: [https://sticky-notes-eight-mu.vercel.app/](https://sticky-notes-eight-mu.vercel.app/)
